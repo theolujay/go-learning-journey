@@ -1,0 +1,99 @@
+name: 📦 Learning Artifact
+description: Track visible outputs that demonstrate your learning
+title: "[ARTIFACT] "
+labels: ["artifact", "portfolio"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Learning artifacts are tangible outputs: READMEs, benchmarks, blog posts, diagrams, etc.
+  
+  - type: dropdown
+    id: artifact-type
+    attributes:
+      label: Artifact Type
+      description: What kind of output is this?
+      options:
+        - README / Documentation
+        - Benchmark Results
+        - Blog Post / Write-up
+        - Code Diagram
+        - Test Coverage Report
+        - Performance Profile
+        - Video Demo
+        - Learning Notes
+        - Refactor / Code Improvement
+    validations:
+      required: true
+  
+  - type: input
+    id: artifact-title
+    attributes:
+      label: Artifact Title
+      description: What are you creating?
+      placeholder: "e.g., 'Week 3 Reflection: Concurrency Patterns', 'Benchmark: Worker Pool vs WaitGroup'"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: Why are you creating this? What does it demonstrate?
+      placeholder: |
+        This benchmark compares two concurrency approaches to show I understand 
+        the performance tradeoffs between worker pools and simple goroutines.
+    validations:
+      required: true
+  
+  - type: input
+    id: related-issue
+    attributes:
+      label: Related Issue
+      description: Link to related concept or project issue
+      placeholder: "#42"
+  
+  - type: textarea
+    id: content-outline
+    attributes:
+      label: Content Outline
+      description: Brief structure or what you'll include
+      placeholder: |
+        1. Problem statement
+        2. Two approaches compared
+        3. Benchmark code
+        4. Results with graphs
+        5. Lessons learned
+  
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: Visibility
+      description: Where will this artifact live?
+      options:
+        - GitHub repo README
+        - LEARNING.md in repo
+        - Standalone blog post
+        - Notion page
+        - LinkedIn post
+        - Just for myself
+  
+  - type: dropdown
+    id: estimated-time
+    attributes:
+      label: Time to Create
+      options:
+        - 15-30 minutes
+        - 30-60 minutes
+        - 1-2 hours
+        - 2+ hours
+  
+  - type: checkboxes
+    id: completion
+    attributes:
+      label: Done When...
+      options:
+        - label: Content written/created
+        - label: Reviewed for clarity
+        - label: Published/committed
+        - label: Linked from portfolio

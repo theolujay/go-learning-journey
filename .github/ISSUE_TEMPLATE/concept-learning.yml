@@ -1,0 +1,89 @@
+name: 🎓 Concept Learning
+description: Learn a new Go concept or language feature
+title: "[CONCEPT] "
+labels: ["concept", "learning"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to track learning a new Go concept (goroutines, interfaces, context, etc.)
+  
+  - type: input
+    id: concept-name
+    attributes:
+      label: Concept Name
+      description: What Go concept are you learning?
+      placeholder: "e.g., Goroutines & Channels, Context package, Testing in Go"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+  
+  - type: textarea
+    id: learning-goals
+    attributes:
+      label: Learning Goals
+      description: What do you want to understand by the end?
+      placeholder: |
+        - Understand how goroutines work
+        - Learn when to use buffered vs unbuffered channels
+        - Build a simple concurrent program
+    validations:
+      required: true
+  
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources
+      description: Links to docs, videos, articles you'll use
+      placeholder: |
+        - [Go by Example - Goroutines](https://gobyexample.com/goroutines)
+        - [JustForFunc video on channels](#)
+        - Go Tour section X
+  
+  - type: textarea
+    id: practice-exercise
+    attributes:
+      label: Practice Exercise
+      description: Small code exercise to cement the concept
+      placeholder: "Build a concurrent URL checker that fetches 10 URLs at once"
+  
+  - type: dropdown
+    id: week
+    attributes:
+      label: Target Week
+      description: Which week of your 12-week plan?
+      options:
+        - Week 1
+        - Week 2
+        - Week 3
+        - Week 4
+        - Week 5
+        - Week 6
+        - Week 7
+        - Week 8
+        - Week 9
+        - Week 10
+        - Week 11
+        - Week 12
+  
+  - type: checkboxes
+    id: completion-criteria
+    attributes:
+      label: Done When...
+      description: How do you know you've learned this?
+      options:
+        - label: Read documentation
+        - label: Watched video(s)
+        - label: Built practice exercise
+        - label: Written notes/summary
+        - label: Can explain to someone else

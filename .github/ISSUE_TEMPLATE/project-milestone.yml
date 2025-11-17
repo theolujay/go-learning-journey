@@ -1,0 +1,96 @@
+name: 🚀 Project Milestone
+description: Track a specific milestone for a Go project
+title: "[PROJECT] "
+labels: ["project", "building"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for project milestones (not entire projects). Break projects into 1-week chunks.
+  
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: Which project is this milestone for?
+      placeholder: "e.g., CLI Todo App (tasks), Calculator API, URL Shortener"
+    validations:
+      required: true
+  
+  - type: input
+    id: milestone-name
+    attributes:
+      label: Milestone Description
+      description: What specific part are you building this week?
+      placeholder: "e.g., 'Add flag parsing & config file support', 'Implement JWT auth', 'Build concurrent scraper'"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What does "done" look like for this milestone?
+      placeholder: |
+        - [ ] User can add tasks via CLI flags
+        - [ ] Config file is read on startup
+        - [ ] Help text displays correctly
+        - [ ] Basic unit tests pass
+    validations:
+      required: true
+  
+  - type: textarea
+    id: technical-requirements
+    attributes:
+      label: Technical Requirements
+      description: What concepts/packages will you use?
+      placeholder: |
+        - flag package for CLI parsing
+        - viper or json for config
+        - Testing with table-driven tests
+  
+  - type: input
+    id: repo-link
+    attributes:
+      label: GitHub Repository
+      description: Link to the project repo
+      placeholder: "https://github.com/yourusername/go-tasks"
+  
+  - type: dropdown
+    id: estimated-hours
+    attributes:
+      label: Estimated Time
+      description: How long will this milestone take?
+      options:
+        - 2-4 hours
+        - 4-8 hours
+        - 8-12 hours
+        - 12+ hours
+  
+  - type: dropdown
+    id: week
+    attributes:
+      label: Target Week
+      options:
+        - Week 1-2
+        - Week 3-5
+        - Week 6-8
+        - Week 9-12
+  
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Potential Blockers
+      description: What might slow you down?
+      placeholder: "Unfamiliar with flag package, need to learn viper first"
+  
+  - type: checkboxes
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What you'll produce
+      options:
+        - label: Working code with commits
+        - label: Unit tests
+        - label: README update
+        - label: Manual testing notes
